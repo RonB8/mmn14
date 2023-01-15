@@ -1,0 +1,8 @@
+# ninja log v5
+2	65	6898020865146077	CMakeFiles/q2.dir/main.c.obj	eb8e4e82574b027a
+59	165	6900692350887868	q2.exe	c8614d3a50d90ba7
+5	71	6900691544531908	CMakeFiles/q2.dir/func.c.obj	dcce480bbdc1d8b2
+2	59	6900692349868475	CMakeFiles/q2.dir/my_rottate.c.obj	3f10ca57915f5452
+19	176	6900673639261606	CMakeFiles/q2.dir/binary.c.obj	17d9cbaa7fe1b8f5
+1	139	6901252742099779	build.ninja	ab65dc945a42c794
+1	66	6898053628371897	CMakeFiles/q2.dir/rottate_my.c.obj	19e8b1b719ab91ef

@@ -1,0 +1,6 @@
+# ninja log v5
+0	104	6926539376208065	CMakeFiles/example_mmn22.dir/main.c.obj	3d9e60848d118c9f
+6	106	6926539376232492	CMakeFiles/example_mmn22.dir/mymat.c.obj	872ad5377c507931
+3	109	6926539376242464	CMakeFiles/example_mmn22.dir/messages.c.obj	c9e31bcb09ce78ea
+10	114	6926539376331563	CMakeFiles/example_mmn22.dir/analyze.c.obj	9a6fe6a5c1016df7
+114	206	6926539377218542	example_mmn22.exe	aeeb620bb5802139

@@ -1,0 +1,3 @@
+C:/Users/user/OneDrive - Open University of Israel/programing/c projects/practice/stammn22/cmake-build-debug/CMakeFiles/stammn22.dir
+C:/Users/user/OneDrive - Open University of Israel/programing/c projects/practice/stammn22/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/user/OneDrive - Open University of Israel/programing/c projects/practice/stammn22/cmake-build-debug/CMakeFiles/rebuild_cache.dir
