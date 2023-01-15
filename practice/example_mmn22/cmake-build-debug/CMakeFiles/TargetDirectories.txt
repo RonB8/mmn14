@@ -1,3 +1,0 @@
-C:/Users/user/OneDrive - Open University of Israel/programing/c projects/practice/example_mmn22/cmake-build-debug/CMakeFiles/example_mmn22.dir
-C:/Users/user/OneDrive - Open University of Israel/programing/c projects/practice/example_mmn22/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/user/OneDrive - Open University of Israel/programing/c projects/practice/example_mmn22/cmake-build-debug/CMakeFiles/rebuild_cache.dir
