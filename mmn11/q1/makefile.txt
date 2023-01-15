@@ -1,6 +1,0 @@
-mmn11_q1: main.o functions.o
-	gcc -ansi -wall -g main.o functions.o -o mmn11_q1
-main.o:	main.c data.h
-	gcc -c -ansi -wall main.c -o main.o
-functions.o:	functions.c data.h
-	gcc -c -ansi -wall functions.c -o functions.o
