@@ -1,3 +1,0 @@
-C:/Users/user/OneDrive - Open University of Israel/programing/c projects/mmn11/q1/cmake-build-debug/CMakeFiles/q1.dir
-C:/Users/user/OneDrive - Open University of Israel/programing/c projects/mmn11/q1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/user/OneDrive - Open University of Israel/programing/c projects/mmn11/q1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
