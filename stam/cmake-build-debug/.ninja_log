@@ -1,6 +1,0 @@
-# ninja log v5
-6	90	6901475803304800	CMakeFiles/stam.dir/functions.c.obj	d4aa4a7dce22f01d
-1	88	6901475803304800	CMakeFiles/stam.dir/main.c.obj	95805143e3c02f78
-0	144	6915334360164348	build.ninja	e92812bd1dd4a24c
-70	164	6901421460882137	stam.exe	d8412a538550675b
-2	98	6901476091119648	CMakeFiles/stam.dir/my_rottate.c.obj	3242071491c0c064
