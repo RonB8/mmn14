@@ -1,0 +1,21 @@
+//
+// Created by אלישיב הורדן on 02/02/2023.
+//
+
+
+typedef enum boolean{
+    FALSE,
+    TRUE
+} boolean;
+
+enum opcode {
+    /*instructions with 2 operands */
+    mov, cmp, add, sub, nit, clr, lea,
+    /*instructions with 1 operand */
+    inc, dec, jmp, bne, red, prn, jsr,
+    /*instructions without operand */
+    rts, stop};
+
+enum registers {r0, r1, r2, r3, r4, r5, r6, r7};
+
+enum adressing_methods {immediate, direct, jump, direct_register};
