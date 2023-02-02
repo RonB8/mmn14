@@ -2,7 +2,6 @@
 // Created by אלישיב הורדן on 02/02/2023.
 //
 
-
 typedef enum boolean{
     FALSE,
     TRUE
@@ -19,3 +18,10 @@ enum opcode {
 enum registers {r0, r1, r2, r3, r4, r5, r6, r7};
 
 enum adressing_methods {immediate, direct, jump, direct_register};
+
+typedef struct{
+    char label[82],
+    int address
+} table;
+
+table label_table[12];
