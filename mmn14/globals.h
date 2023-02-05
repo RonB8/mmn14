@@ -3,6 +3,7 @@
 //
 
 #define IC_ADDRESS 100
+#define MAX_LINE_LEN 82
 
 typedef enum boolean{
     FALSE,
