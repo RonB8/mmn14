@@ -1,0 +1,72 @@
+//#include <stdio.h>
+//#include "data.h"
+//#include <strings.h>
+//
+//
+//void printBits(size_t const size, void const * const ptr);
+//void nMask(set s, int n);
+//void read(set s);
+//void printSet(set s);
+//int emptySet(set s);
+//void unionSet(set a, set b); //Copies set b to set a
+//int equalSets(set a, set b);
+//void intersectSet(set a, set b, set c);
+//void subSet(set a, set b, set c);
+//void symdiffSet(set a, set b, set c);
+//void printAllSets(set,set,set,set,set,set);
+//int main() {
+//    char instruction[15]={0};
+//    char firstArg[15], secondArg[15], thirdArg[15];
+//    char setAStr[]="SETA",setBStr[]="SETB", setCStr[]="SETC", setDStr[]="SETD", setEStr[]="SETE", setFStr[]="SETF";
+//    char readStr[]="read", printSetStr[]="printSet", emptySetStr[]="emptySet", unionSetStrStr[]="unionSet", equalSetsStrStr[]="equalSets", intersectSetStr[]="intersectSet", subSetStr[]="subSet", symdiffSetStr[]="symdiffSet";
+//    set SETA={0}, SETB={0}, SETC={0}, SETD={0}, SETE={0}, SETF={0};
+//    set *operandA, *operandB, *operandC;
+//    operandA = &SETA; operandB = &SETB; operandC = &SETC; //initializing just to avoid error
+//    //pointer to functions
+//    void (*one_set)(set a); one_set = printSet;
+//    void (*two_sets)(set a, set b); two_sets = unionSet;
+//    void (*three_sets)(set a, set b, set c); three_sets = intersectSet;
+//
+//    puts("Insert the desired command:");
+//    scanf("%s",instruction);
+//    if((strcmp(instruction, readStr))==0||(strcmp(instruction, printSetStr))==0||(strcmp(instruction, emptySetStr))==0){
+//        one_set = read;
+//        scanf("%s", firstArg);
+//        if(strcmp(firstArg, setAStr)==0) operandA=&SETA;
+//        else if(strcmp(firstArg, setBStr)==0) operandA=&SETB;
+//        else if(strcmp(firstArg, setCStr)==0) operandA=&SETC;
+//        else if(strcmp(firstArg, setDStr)==0) operandA=&SETD;
+//        else if(strcmp(firstArg, setEStr)==0) operandA=&SETE;
+//        else if(strcmp(firstArg, setFStr)==0) operandA=&SETF;
+//
+//    }
+//    one_set((*operandA));
+//    one_set=printSet;
+////    one_set(*argA);
+////    symdiffSet(SETB, SETC, SETD);
+//    printAllSets(SETA, SETB, SETC, SETD, SETE, SETF);
+//    return 0;
+//}
+//void scanSets(set **a, set **b, set **c) {
+//    int counter=0;
+//    char ch;
+//    char *s1[4] = {0}, *s2[4], *s3[4];
+//    scanf("%s", s1);
+//    if (strcmp(*s1, setAStr) == 0) *a = (set *) SETA;
+//    do {
+//        ch = getchar();
+//        if (ch == '\0' || ch == ' ' || ch == '\n' || ch == '\t')
+//            continue;
+//        if (ch == ',') {
+//            scanf("%s", s1);
+//            if(strcmp(s1, setAStr)==0) (counter++)==1? (*b=&SETA): (*c=&SETA);
+//            else if(strcmp(s1, setBStr)==0) (counter++)==1? (*b=&SETB): (*c=&SETB);
+//            else if(strcmp(s1, setCStr)==0) (counter++)==1? (*b=&SETC): (*c=&SETC);
+//            else if(strcmp(s1, setDStr)==0) (counter++)==1? (*b=&SETD): (*c=&SETD);
+//            else if(strcmp(s1, setEStr)==0) (counter++)==1? (*b=&SETE): (*c=&SETE);
+//            else if(strcmp(s1, setFStr)==0) (counter++)==1? (*b=&SETF): (*c=&SETF);
+//        }
+//    }
+//    while(ch>'z' && ch<'a');
+//
+//}

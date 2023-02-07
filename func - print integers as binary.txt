@@ -1,0 +1,35 @@
+void asBinary(int num)
+{
+    int n=num;
+    int i=0;
+    char res[100];
+    while(n>0)
+    {
+        res[i] = (n%2 == 0)? '0': '1';
+        n/=2;
+        i++;
+    }
+    res[i] = '\0';
+    reversePrint((res));
+}
+
+void reversePrint(char *s)
+{
+    int length = sizeArr(&(*s));
+    int i = length-1;
+    while(i>=0)
+    {
+        printf("%c", *(s+i));
+        i--;
+    }
+}
+
+int sizeArr(char *arr)
+{
+    int i=0;
+    while (*(arr+i)!='\0')
+    {
+        i++;
+    }
+    return i;
+}
