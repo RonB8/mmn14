@@ -13,7 +13,7 @@ L1: inc K
 bne LOOP(K,STR)
 mcr m2
 END: stop
-endmcrk
+endmcrkס
 STR: .string "abcdef"
 endmcr
 LENGTH: .data 6,-9,15

@@ -1,43 +1,52 @@
 #include "pre_assmbler.h"
 #include "data.h"
-void mcrLabelsSpread(Vars* vars){
+
+
+FILE* mcrLabelsSpread(FILE* source){
     int mcrFlag=0;
     int i=0;
     char line[81];
+    int labelsCounter=0;
+    int fileCounter;
+    FILE* result;
+    result = fopen("C:\\filesForC\\afterPreAsm.am", "w");
     resetStr(line);
-    Mcr* temp=NULL;
-    while(!feof(vars->file1)) {
-        scanLine(vars->file1, line, &vars->IC);
+    Mcr* root;
+    Mcr* temp;
+    root=NULL; temp=NULL;
+    while(!feof(source)) {
+        scanLine(source, line);
         checkMcr(line, &mcrFlag);
-        checkLabel(line, &vars->labelsCounter);
+        checkLabel(line, &labelsCounter);
         if(mcrFlag){
             Mcr* m;
             m = (Mcr*)malloc(sizeof(Mcr));
             resetMcr(m);
-            char *temp = malloc(sizeof(strtok(line+4," ")));
-            strcpy(temp, strtok(line+4," "));
-            m->name = temp;
-            m->start = ftell(vars->file1);
-            while(!feof(vars->file1) && mcrFlag){
-                vars->fileCounter = ftell(vars->file1);
+            char *mcrName;
+            mcrName = malloc(sizeof(strtok(line+4," ")));
+            strcpy(mcrName, strtok(line+4," "));
+            m->name = mcrName;
+            m->start = ftell(source);
+            while(!feof(source) && mcrFlag){
+                fileCounter = ftell(source);
                 resetStr(line);
-                scanLine(vars->file1, line, &vars->IC);
+                scanLine(source, line);
                 checkMcr(line, &mcrFlag);
-                checkLabel(line, &vars->labelsCounter);
+                checkLabel(line, &labelsCounter);
                 i++;
             }
             //אם אנחנו כאן סימן שהמאקרו הסתיים
-            m->end = vars->fileCounter;
-            pushMcr(&vars->mcr,m);
-            vars->mcrCounter++;
+            m->end = fileCounter;
+            pushMcr(&root,m);
+//            vars->mcrCounter++;
             continue;
         }
         else
-            temp = idetifyMcr(vars->mcr, line);
+            temp = idetifyMcr(root, line);
         if(temp != NULL)
-            printMcr(temp, vars);
+            printMcr(result, source, temp);
         else
-            fprintf(vars->file2, "%s", line);
+            fprintf(result, "%s", line);
         i++;
     }
 }
@@ -64,4 +73,21 @@ void checkMcr(char* str, int* mcrFlag){
         *mcrFlag=1;
     else if(stricmp(str, "endmcr\n")==0)
     *mcrFlag=0;
+}
+void resetMcr(Mcr* mcr){
+    char emptyStr[8]={0};
+    mcr->name = malloc(sizeof(emptyStr));
+    strcpy(mcr->name, emptyStr);
+    mcr->start=0;
+    mcr->end=0;
+    mcr->nextMcr = NULL;
+}
+void pushMcr(Mcr** rootMcr, Mcr* newMcr){
+    Mcr* m;
+    if(*rootMcr == NULL) {
+        *rootMcr = newMcr;
+        (*rootMcr)->nextMcr = NULL;
+    }
+    else
+        pushMcr(&((*rootMcr)->nextMcr), newMcr);
 }

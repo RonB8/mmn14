@@ -3,4 +3,4 @@ project(mmn14 C)
 
 set(CMAKE_C_STANDARD 90)
 
-add_executable(mmn14 main.c textProccesing.c data.h dataStructures.c paths.h pre_assmbler.c pre_assmbler.h)
+add_executable(mmn14 main.c textProccesing.c data.h dataStructures.c paths.h pre_assmbler.c pre_assmbler.h forUnitWithFP.c)

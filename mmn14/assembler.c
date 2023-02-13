@@ -1,8 +1,7 @@
 #include "globals.h"
-
 #include <stdio.h>
 
-static boolean make_process(char* argv[i]);
+static boolean make_process(char* argv[]);
 
 int main(int argc, char* argv[]) {
     int i;
@@ -15,7 +14,7 @@ int main(int argc, char* argv[]) {
 }
 
 
-static boolean make_process(char* argv[i])
+static boolean make_process(char* argv[])
 {
     FILE* file;
     /*חלק של קדם אסמבלר*/

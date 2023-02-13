@@ -1,0 +1,54 @@
+//Need to move to another file!!!
+void varsTodefaulte(Vars* vars){
+    char emptyStr[80]={0};
+    strcpy(vars->operation, emptyStr);
+    strcpy(vars->addWord1, emptyStr);
+    strcpy(vars->addWord2, emptyStr);
+    strcpy(vars->currentWord, emptyStr);
+    strcpy(vars->line, emptyStr);
+    strcpy(vars->operand1, emptyStr);
+    strcpy(vars->operand2, emptyStr);
+    strcpy(vars->parameter1, emptyStr);
+    strcpy(vars->parameter2, emptyStr);
+    vars->mcrFlag=0;
+    vars->IC=0;
+    vars->mcrCounter=0;
+    vars->labelsCounter=0;
+    vars->fileCounter=0;
+    vars->mcr=NULL;
+    vars->file1 = fopen(PATH1, "r"); //PATH1/2 defined in paths.h
+    vars->file2 = fopen(PATH2, "w");
+    int i=0;
+    for(;i<80;i++)
+        vars->line[i]=0;
+        emptyStr[i]=0;
+}
+
+
+
+
+
+//מבנה שמכיל את כל הפרמטרים הנדרשים לפונקציות, מוגדר כמבנה כדי שיהיה אפשר להעביר את כל המשתנים בין הפונקציות ע"י כתובת אחת - של Vars
+typedef struct { //לפצל!
+    char line[81];
+    char operation[5]; //The longest operation is 'stop' whose length is 4
+    char operand1[12]; //points to the operand (label/register/immediate number)
+    char operand2[12];
+    char parameter1[12];
+    char parameter2[12];
+    char firstWord[14]; //Of the machine code
+    char addWord1[14]; //first additional word
+    char addWord2[14]; //second additional word
+    char currentWord[14]; //לתוכה תיכנס המילה שניקראה, יתבצע העיבוד, ואז המילה תועתק למילה הרלוונטית (מתוך ה3 למעלה)
+    //      -flags-
+    //דלוק = 1, כבוי = 0
+    int mcrFlag; //נדלק אם זוהתה פקודת מאקרו("mcr"), נכבה אם זוהתה סוף פקודת מאקרו ("endmcr")
+    int IC; //מונה שורות הפקודה (instruction counter)
+    char *comArr[MAX_LINES]; //מערך של שורות הפקודה בקובץ
+    Mcr* mcr;
+    int mcrCounter;
+    int labelsCounter;
+    int fileCounter;
+    FILE* file1;
+    FILE* file2;
+}Vars; //variables (אם יש לך שם יותר טוב מוזמן להציע)

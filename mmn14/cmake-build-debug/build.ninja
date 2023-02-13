@@ -73,6 +73,12 @@ build CMakeFiles/mmn14.dir/pre_assmbler.c.obj: C_COMPILER__mmn14_Debug C$:/Users
   OBJECT_DIR = CMakeFiles\mmn14.dir
   OBJECT_FILE_DIR = CMakeFiles\mmn14.dir
 
+build CMakeFiles/mmn14.dir/forUnitWithFP.c.obj: C_COMPILER__mmn14_Debug C$:/Users/user/OneDrive$ -$ Open$ University$ of$ Israel/programing/c$ projects/mmn14/forUnitWithFP.c || cmake_object_order_depends_target_mmn14
+  DEP_FILE = CMakeFiles\mmn14.dir\forUnitWithFP.c.obj.d
+  FLAGS = -g -std=gnu90
+  OBJECT_DIR = CMakeFiles\mmn14.dir
+  OBJECT_FILE_DIR = CMakeFiles\mmn14.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target mmn14
@@ -81,7 +87,7 @@ build CMakeFiles/mmn14.dir/pre_assmbler.c.obj: C_COMPILER__mmn14_Debug C$:/Users
 #############################################
 # Link the executable mmn14.exe
 
-build mmn14.exe: C_EXECUTABLE_LINKER__mmn14_Debug CMakeFiles/mmn14.dir/main.c.obj CMakeFiles/mmn14.dir/textProccesing.c.obj CMakeFiles/mmn14.dir/dataStructures.c.obj CMakeFiles/mmn14.dir/pre_assmbler.c.obj
+build mmn14.exe: C_EXECUTABLE_LINKER__mmn14_Debug CMakeFiles/mmn14.dir/main.c.obj CMakeFiles/mmn14.dir/textProccesing.c.obj CMakeFiles/mmn14.dir/dataStructures.c.obj CMakeFiles/mmn14.dir/pre_assmbler.c.obj CMakeFiles/mmn14.dir/forUnitWithFP.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\mmn14.dir
